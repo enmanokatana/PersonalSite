@@ -1,96 +1,124 @@
 <template>
 
-<div class="hero min-h-screen bg-base-200">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-bold">Hello there</h1>
-      <p class="py-6">Welcome to our learning platform! Join us and unlock your potential through engaging courses, personalized learning, and a supportive community. Let's embark on a journey of growth and knowledge together!</p>
-      <button  href="#Classes" class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
+
+<div id="animat" class="hero min-h-screen bg-base-200 w-full">
+    <div class="text-center">
+  <p class="text-2xl font-bold">Hey I'm</p>
+  <br>
+  <h1 class="text-8xl font-bold ">HAYAOUI MOUAD</h1>
+
+  <h2 class="text-5xl font-bold animate-letters"> I'm a  Student/SoftwareDev</h2>
+  <br>
+  <br>
+  <br>
+  <div class="text-center">
+  <a href="#1" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-full relative overflow-hidden bg-gray-800 text-white hover:text-gray-800 hover:bg-white hover:border-gray-800">
+    <svg class="arrow-down absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+    <span class="hover-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">SHOW MORE</span>
+  </a>
 </div>
-<div class=" h-5"></div>
-<div id="Classes" class="grid flex-grow h-32  rounded-box place-items-center ml-5 mr-5">
-  <!-- <div class="join join-vertical w-full">
-  <div class="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" /> 
-    <div class="collapse-title text-xl font-medium">
-      1er Annee prepa
-    </div>
-    <div class="collapse-content"> 
-      <p> Access all the lesson of AP1 divided</p>
-      <router-link to="/AP1" class="label-text-alt link link-hover">AP1</router-link>
-      <P></P>
-      <router-link to="/AP1" class="label-text-alt link link-hover">Semester1</router-link>
 
-    </div>
-  </div>
-  <div class="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" checked /> 
-    <div class="collapse-title text-xl font-medium">
-    2eme Annee prepa
-    </div>
-    <div class="collapse-content"> 
-      <p>hello</p>
-    </div>
-  </div>
-</div> -->
-</div> 
+</div>
 
-<div id="accordion-collapse" data-accordion="collapse">
-  <h2 id="accordion-collapse-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-      <span>1er Annee prepa</span>
-      <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-      <p class="mb-2 text-gray-500 dark:text-gray-400"><a href="./AP1">AP1</a></p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-    </div>
-  </div>
-  <h2 id="accordion-collapse-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-      <span>2eme Annee Prepa</span>
-      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div>
-  </div>
-  <h2 id="accordion-collapse-heading-3">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-      <span>Genie Informatique</span>
-      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-      </ul>
-    </div>
+</div>
+<div id="1" class="m-10">
+    <div class="flex justify-center">
+
+  <div class="join join-vertical lg:join-horizontal text-center">
+  <P class=" text-xl mr-10 mt-2 ">Quick search : </P> 
+   <button class="btn join-item"><a href="#info-p">Personal Info</a></button>
+   <button class="btn join-item"><a href="#info-p">Eductaion</a></button>
+   <button class="btn join-item"><a href="#info-p">Skills</a></button>
+   <button class="btn join-item"><a href="#info-p">Projects</a></button>
+
   </div>
 </div>
 
+</div>
+<div id="info-p" class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 class="text-5xl font-bold">Personal Information</h1>
+      <br>
+      <br>
+      <div class=" text-xl bg-white shadow-lg rounded-lg p-20 ">
+    <p><strong>First Name:</strong> Mouad</p>
+    <br>
+    <p><strong>Last Name:</strong> Hayaoui</p>
+    <br>
+    <p><strong>Email:</strong> hayaouimouadoff@gmail.com</p>
+    <br>
+    <p><strong>Phone:</strong> (+212)762444969</p>
+    <br>
+    <p><strong>Address:</strong> Casablanca,Morocco</p>
+  </div>
+
+    </div>
+  </div>
+</div>
+ <!-- CARDS -->
+ <div class="grid grid-cols-4 gap-4 m-10">
+        <div class="card w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Number of Hours worked</h2>
+                <div class="radial-progress ml-auto" style="--value:70;">70%</div>
+            </div>
+        </div>
+        <div class="card w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Number of lessons dowloaded</h2>
+               
+            </div>
+        </div>
+        <div class="card w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Card title!</h2>
+               
+            </div>       
+         </div>
+        <div class="card w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Card title!</h2>
+               
+            </div>       
+         </div>
+         
+      </div>
+      <hr class="m-5 ml-10 mr-10"> 
 
 
 </template>
 
 <script>
+import chart from '../components/chart.vue';
 export default{
     name:'Home',
     components:{
-
+chart,
     },
 
 }
 </script>
+
+<style>
+@keyframes showLetters {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-letters {
+  display: inline-block;
+  animation: showLetters 2s forwards;
+  animation-delay: 0.1s;
+}
+
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="myChart" class="w-600 h-300 ml-10"></canvas>
+    <canvas id="myChart" class="w-400 h-400"></canvas>
   </div>
 </template>
 
@@ -8,34 +8,35 @@
 import Chart from 'chart.js/auto';
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: [
+    'C++',
+    'C',
+    'PHP',
+    'JavaScript',
+    'Html/Css',
+    'Python',
+    'Sql/PlSql'
+  ],
   datasets: [{
-    label: 'Try hiding me',
-    data: [65, 59, 80, 81, 26, 55, 40],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
+    label: '%',
+    data: [15, 15, 8,16,20,16,10],
+    backgroundColor: [
+      '#3354cc',
+      '#7e5cd6',
+      '#5768a2',
+      '#0a1129',
+      '#292c38',
+      '#e9c4cc',
+      '#cfbe81'
+    ],
+    hoverOffset: 4
   }]
 };
 
 const config = {
-  type: 'line',
+  type: 'pie',
   data: data,
-  options: {
-    transitions: {
-      show: {
-        animations: {
-          x: { from: 0 },
-          y: { from: 0 }
-        }
-      },
-      hide: {
-        animations: {
-          x: { to: 0 },
-          y: { to: 0 }
-        }
-      }
-    }
-  }
+  
 };
 
 // Wait for the component to be mounted
