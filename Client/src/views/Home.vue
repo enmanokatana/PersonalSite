@@ -12,13 +12,13 @@
   <br>
   <br>
   <div class="text-center">
-  <a href="#1" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-full relative overflow-hidden bg-gray-800 text-white hover:text-gray-800 hover:bg-white hover:border-gray-800">
-    <svg class="arrow-down absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-    </svg>
-    <span class="hover-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">SHOW MORE</span>
-  </a>
-</div>
+    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-full relative overflow-hidden bg-gray-800 text-white hover:text-gray-800 hover:bg-white hover:border-gray-800" @click="smoothScrollTo('#info-p')">
+      <svg class="arrow-down absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+      <span class="hover-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">SHOW MORE</span>
+    </button>
+  </div>
 
 </div>
 
@@ -26,13 +26,12 @@
 <div id="1" class="m-10">
     <div class="flex justify-center">
 
-  <div class="join join-vertical lg:join-horizontal text-center">
-  <P class=" text-xl mr-10 mt-2 ">Quick search : </P> 
-   <button class="btn join-item"><a href="#info-p">Personal Info</a></button>
-   <button class="btn join-item"><a href="#info-p">Eductaion</a></button>
-   <button class="btn join-item"><a href="#info-p">Skills</a></button>
-   <button class="btn join-item"><a href="#info-p">Projects</a></button>
-
+      <div class="join join-vertical lg:join-horizontal text-center">
+    <p class="text-xl mr-10 mt-2">Quick search : </p>
+    <button class="btn join-item" @click="smoothScrollTo('#info-p')">Personal Info</button>
+    <button class="btn join-item" @click="smoothScrollTo('#education')">Education</button>
+    <button class="btn join-item" @click="smoothScrollTo('#skills')">Skills</button>
+    <button class="btn join-item" @click="smoothScrollTo('#projects')">Projects</button>
   </div>
 </div>
 
@@ -60,19 +59,29 @@
   </div>
 </div>
  <!-- CARDS -->
- <div class="grid grid-cols-4 gap-4 m-10">
-        <div class="card w-full bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">Number of Hours worked</h2>
-                <div class="radial-progress ml-auto" style="--value:70;">70%</div>
-            </div>
-        </div>
-        <div class="card w-full bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">Number of lessons dowloaded</h2>
-               
-            </div>
-        </div>
+ <h1 id="skills" class="text-5xl font-bold text-center m-10">Skills</h1>
+
+ <div class="grid grid-cols-2 gap-2 m-10">
+  <div class="card w-full bg-base-100 shadow-xl text-center flex justify-center items-center">
+  <div class="card-body">
+    <h2 class=" text-3xl card-title">FrontEnd dev</h2>
+    <div class="radial-progress w-24 h-24  " style="--value:70; ">
+  70%
+</div>
+  </div>
+</div>
+
+<div class="card w-full bg-base-100 shadow-xl text-center">
+    <div class="card-body">
+        <h2 class="text-3xl card-title  " >BackEnd dev</h2>
+        <progress class="progress w-80" value="0" max="100"></progress>
+        <progress class="progress w-100" value="10" max="100"></progress>
+        <progress class="progress w-100" value="40" max="100"></progress>
+        <progress class="progress w-100" value="70" max="100"></progress>
+        <progress class="progress w-100" value="100" max="100"></progress>  
+    </div>
+</div>
+
         <div class="card w-full bg-base-100 shadow-xl">
             <div class="card-body">
                 <h2 class="card-title">Card title!</h2>
@@ -99,6 +108,17 @@ export default{
     components:{
 chart,
     },
+  methods: {
+    smoothScrollTo(target) {
+      const element = document.querySelector(target);
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY;
+
+      window.scroll({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    },
+  },
 
 }
 </script>
